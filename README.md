@@ -1,0 +1,1 @@
+This repository has simple example demonstrating how to use BridgeKit and AndroidKit with the SpriteBuilder Android Plugin.

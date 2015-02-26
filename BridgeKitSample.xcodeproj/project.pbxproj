@@ -162,6 +162,7 @@
 		3CE219191A9D73A8000C509D /* ToastBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToastBridge.m; path = Source/Platforms/Android/ToastBridge.m; sourceTree = "<group>"; };
 		3CE219221A9D768F000C509D /* ToastBridge.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = ToastBridge.java; path = Source/Platforms/Android/java/com/apportable/bridgekitsample/ToastBridge.java; sourceTree = "<group>"; };
 		3CE2192C1A9E5AB4000C509D /* BridgeKitSampleJava.jar */ = {isa = PBXFileReference; explicitFileType = compiled.java.jar; includeInIndex = 0; path = BridgeKitSampleJava.jar; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CE219351A9EC1AD000C509D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100F197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		5B121011197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
@@ -484,6 +485,7 @@
 		B77F1B2517B978D7009739AE = {
 			isa = PBXGroup;
 			children = (
+				3CE219351A9EC1AD000C509D /* README.md */,
 				B737893C1807616C0076A88C /* Source */,
 				B77F1B4617B978D7009739AE /* Resources */,
 				9222E2B918734FF800A246C7 /* libs */,
