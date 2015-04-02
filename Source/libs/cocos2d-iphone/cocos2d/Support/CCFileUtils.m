@@ -825,6 +825,9 @@ static CCFileUtils *fileUtils = nil;
 {
     CGFloat contentScale = 1.0;
     NSString *fullpath = [fileUtils fullPathForFilename:name contentScale:&contentScale];
+    if (!fullpath) {
+        return nil;
+    }
     NSURL *url = [NSURL fileURLWithPath:fullpath];
     return [[CCFile alloc] initWithName:name url:url contentScale:contentScale];
 }

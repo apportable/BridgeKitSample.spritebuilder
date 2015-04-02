@@ -27,8 +27,7 @@
 @property (nonatomic, strong) NSString *startScene;
 + (instancetype)currentActivity;
 
-
-- (void)run;
+- (void)run __attribute__((objc_requires_super));
 
 - (void)scheduleInRunLoop;
 

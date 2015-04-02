@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CE2191F1A9D75FB000C509D /* ToastBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE219191A9D73A8000C509D /* ToastBridge.m */; };
-		3CE219321A9E5B03000C509D /* ToastBridge.java in Sources */ = {isa = PBXBuildFile; fileRef = 3CE219221A9D768F000C509D /* ToastBridge.java */; };
 		5B121030197484FA004C1E1D /* BridgeKitSampleActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B12102F197484FA004C1E1D /* BridgeKitSampleActivity.m */; };
 		5B121038197487F2004C1E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
 		7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B7378993180767190076A88C /* MainScene.m */; };
@@ -65,6 +63,12 @@
 		927F61B9196C771E000F43EF /* iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590E188484E7003F4D28 /* iPhone@2x.png */; };
 		927F61BA196C771E000F43EF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B737896D180762440076A88C /* Default.png */; };
 		927F61BB196C771E000F43EF /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
+		B45B38711ACDB9D20096A4E2 /* ToastBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = B45B386F1ACDB9D20096A4E2 /* ToastBridge.m */; };
+		B45B38781ACDBA520096A4E2 /* ToastBridge.java in Sources */ = {isa = PBXBuildFile; fileRef = B45B386D1ACDB9D20096A4E2 /* ToastBridge.java */; };
+		B45B387C1ACDBA7A0096A4E2 /* BridgeKitSampleJava.jar in CopyFiles */ = {isa = PBXBuildFile; fileRef = B45B38741ACDBA3B0096A4E2 /* BridgeKitSampleJava.jar */; };
+		B4E022681ACDE6F6000CD9D5 /* BridgeKitSampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E022671ACDE6F6000CD9D5 /* BridgeKitSampleController.m */; };
+		B4E022691ACDE6F6000CD9D5 /* BridgeKitSampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E022671ACDE6F6000CD9D5 /* BridgeKitSampleController.m */; };
+		B4E0226A1ACDE6F6000CD9D5 /* BridgeKitSampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E022671ACDE6F6000CD9D5 /* BridgeKitSampleController.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
 		B71F5913188484E7003F4D28 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
@@ -99,20 +103,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3CE2191D1A9D73A9000C509D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7378940180761A80076A88C /* cocos2d.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B7E7DE341A76DB7D004234B7;
-			remoteInfo = cocos2dMacFramework;
-		};
-		3CE219331A9E668C000C509D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B77F1B2617B978D7009739AE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3CE2192B1A9E5AB4000C509D;
-			remoteInfo = BridgeKitSampleJava;
-		};
 		7A9790FD19E62E40001FFC4D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B7378940180761A80076A88C /* cocos2d.xcodeproj */;
@@ -155,14 +145,29 @@
 			remoteGlobalIDString = D2FEB60D194F6C9E00FC0574;
 			remoteInfo = cocos2dAndroid;
 		};
+		B45B38791ACDBA600096A4E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B77F1B2617B978D7009739AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B45B38731ACDBA3B0096A4E2;
+			remoteInfo = BridgeKitSampleJava;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B45B387B1ACDBA640096A4E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = java;
+			dstSubfolderSpec = 1;
+			files = (
+				B45B387C1ACDBA7A0096A4E2 /* BridgeKitSampleJava.jar in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		3CE219181A9D73A8000C509D /* ToastBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToastBridge.h; path = Source/Platforms/Android/ToastBridge.h; sourceTree = "<group>"; };
-		3CE219191A9D73A8000C509D /* ToastBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToastBridge.m; path = Source/Platforms/Android/ToastBridge.m; sourceTree = "<group>"; };
-		3CE219221A9D768F000C509D /* ToastBridge.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = ToastBridge.java; path = Source/Platforms/Android/java/com/apportable/bridgekitsample/ToastBridge.java; sourceTree = "<group>"; };
-		3CE2192C1A9E5AB4000C509D /* BridgeKitSampleJava.jar */ = {isa = PBXFileReference; explicitFileType = compiled.java.jar; includeInIndex = 0; path = BridgeKitSampleJava.jar; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CE219351A9EC1AD000C509D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100F197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		5B121011197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
@@ -187,6 +192,12 @@
 		7BF6AF9F1A425F9800FFF9BA /* JavaFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaFoundation.framework; path = "../../../../../../../Library/SBAndroid/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaFoundation.framework"; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		927F61BF196C771E000F43EF /* BridgeKitSample Android.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BridgeKitSample Android.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45B386D1ACDB9D20096A4E2 /* ToastBridge.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = ToastBridge.java; sourceTree = "<group>"; };
+		B45B386E1ACDB9D20096A4E2 /* ToastBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToastBridge.h; path = Source/Platforms/Android/ToastBridge.h; sourceTree = "<group>"; };
+		B45B386F1ACDB9D20096A4E2 /* ToastBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToastBridge.m; path = Source/Platforms/Android/ToastBridge.m; sourceTree = "<group>"; };
+		B45B38741ACDBA3B0096A4E2 /* BridgeKitSampleJava.jar */ = {isa = PBXFileReference; explicitFileType = compiled.java.jar; includeInIndex = 0; path = BridgeKitSampleJava.jar; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E022661ACDE6F6000CD9D5 /* BridgeKitSampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BridgeKitSampleController.h; path = Source/BridgeKitSampleController.h; sourceTree = "<group>"; };
+		B4E022671ACDE6F6000CD9D5 /* BridgeKitSampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BridgeKitSampleController.m; path = Source/BridgeKitSampleController.m; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
 		B71F5909188484E7003F4D28 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = Icons/iPad.png; sourceTree = "<group>"; };
@@ -352,11 +363,11 @@
 		7A40362219DDF090007B6E8F /* Android */ = {
 			isa = PBXGroup;
 			children = (
-				3CE219221A9D768F000C509D /* ToastBridge.java */,
+				B45B38691ACDB9D20096A4E2 /* java */,
+				B45B386E1ACDB9D20096A4E2 /* ToastBridge.h */,
+				B45B386F1ACDB9D20096A4E2 /* ToastBridge.m */,
 				5B12102E197484FA004C1E1D /* BridgeKitSampleActivity.h */,
 				5B12102F197484FA004C1E1D /* BridgeKitSampleActivity.m */,
-				3CE219181A9D73A8000C509D /* ToastBridge.h */,
-				3CE219191A9D73A8000C509D /* ToastBridge.m */,
 			);
 			name = Android;
 			sourceTree = "<group>";
@@ -428,7 +439,6 @@
 				7A9790FE19E62E40001FFC4D /* libcocos2d.a */,
 				7A97910019E62E40001FFC4D /* libcocos2dAndroid.a */,
 				7A97910419E62E40001FFC4D /* libcocos2d-mac.a */,
-				3CE2191E1A9D73A9000C509D /* cocos2dMacFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -450,10 +460,45 @@
 			name = libs;
 			sourceTree = "<group>";
 		};
+		B45B38691ACDB9D20096A4E2 /* java */ = {
+			isa = PBXGroup;
+			children = (
+				B45B386A1ACDB9D20096A4E2 /* com */,
+			);
+			name = java;
+			path = Source/Platforms/Android/java;
+			sourceTree = "<group>";
+		};
+		B45B386A1ACDB9D20096A4E2 /* com */ = {
+			isa = PBXGroup;
+			children = (
+				B45B386B1ACDB9D20096A4E2 /* apportable */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		B45B386B1ACDB9D20096A4E2 /* apportable */ = {
+			isa = PBXGroup;
+			children = (
+				B45B386C1ACDB9D20096A4E2 /* bridgekitsample */,
+			);
+			path = apportable;
+			sourceTree = "<group>";
+		};
+		B45B386C1ACDB9D20096A4E2 /* bridgekitsample */ = {
+			isa = PBXGroup;
+			children = (
+				B45B386D1ACDB9D20096A4E2 /* ToastBridge.java */,
+			);
+			path = bridgekitsample;
+			sourceTree = "<group>";
+		};
 		B737893C1807616C0076A88C /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				7A40362019DDEF0D007B6E8F /* Platforms */,
+				B4E022661ACDE6F6000CD9D5 /* BridgeKitSampleController.h */,
+				B4E022671ACDE6F6000CD9D5 /* BridgeKitSampleController.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
 				D352B48019EC608A00829775 /* MetalShaders */,
@@ -485,7 +530,6 @@
 		B77F1B2517B978D7009739AE = {
 			isa = PBXGroup;
 			children = (
-				3CE219351A9EC1AD000C509D /* README.md */,
 				B737893C1807616C0076A88C /* Source */,
 				B77F1B4617B978D7009739AE /* Resources */,
 				9222E2B918734FF800A246C7 /* libs */,
@@ -501,7 +545,7 @@
 				B77F1B2E17B978D7009739AE /* BridgeKitSample.app */,
 				927F61BF196C771E000F43EF /* BridgeKitSample Android.app */,
 				7A4035FF19DDEE84007B6E8F /* BridgeKitSample Mac.app */,
-				3CE2192C1A9E5AB4000C509D /* BridgeKitSampleJava.jar */,
+				B45B38741ACDBA3B0096A4E2 /* BridgeKitSampleJava.jar */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -561,21 +605,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3CE2192B1A9E5AB4000C509D /* BridgeKitSampleJava */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3CE219311A9E5AB4000C509D /* Build configuration list for PBXNativeTarget "BridgeKitSampleJava" */;
-			buildPhases = (
-				3CE2192A1A9E5AB4000C509D /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BridgeKitSampleJava;
-			productName = BridgeKitSampleJava;
-			productReference = 3CE2192C1A9E5AB4000C509D /* BridgeKitSampleJava.jar */;
-			productType = "com.apportable.java.product-type.library";
-		};
 		7A4035FE19DDEE84007B6E8F /* BridgeKitSample Mac */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A40361E19DDEE84007B6E8F /* Build configuration list for PBXNativeTarget "BridgeKitSample Mac" */;
@@ -602,17 +631,33 @@
 				927F619C196C771E000F43EF /* Sources */,
 				927F61A0196C771E000F43EF /* Frameworks */,
 				927F61AC196C771E000F43EF /* Resources */,
+				B45B387B1ACDBA640096A4E2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3CE219341A9E668C000C509D /* PBXTargetDependency */,
+				B45B387A1ACDBA600096A4E2 /* PBXTargetDependency */,
 				7A97912219E6321C001FFC4D /* PBXTargetDependency */,
 			);
 			name = "BridgeKitSample Android";
 			productName = Example;
 			productReference = 927F61BF196C771E000F43EF /* BridgeKitSample Android.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B45B38731ACDBA3B0096A4E2 /* BridgeKitSampleJava */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B45B38751ACDBA3B0096A4E2 /* Build configuration list for PBXNativeTarget "BridgeKitSampleJava" */;
+			buildPhases = (
+				B45B38721ACDBA3B0096A4E2 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BridgeKitSampleJava;
+			productName = BridgeKitSampleJava;
+			productReference = B45B38741ACDBA3B0096A4E2 /* BridgeKitSampleJava.jar */;
+			productType = "com.apportable.java.product-type.library";
 		};
 		B77F1B2D17B978D7009739AE /* BridgeKitSample iOS */ = {
 			isa = PBXNativeTarget;
@@ -643,11 +688,11 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Apportable;
 				TargetAttributes = {
-					3CE2192B1A9E5AB4000C509D = {
-						CreatedOnToolsVersion = 6.1.1;
-					};
 					7A4035FE19DDEE84007B6E8F = {
 						CreatedOnToolsVersion = 6.0.1;
+					};
+					B45B38731ACDBA3B0096A4E2 = {
+						CreatedOnToolsVersion = 6.2;
 					};
 					B77F1B2D17B978D7009739AE = {
 						SystemCapabilities = {
@@ -680,19 +725,12 @@
 				B77F1B2D17B978D7009739AE /* BridgeKitSample iOS */,
 				927F6198196C771E000F43EF /* BridgeKitSample Android */,
 				7A4035FE19DDEE84007B6E8F /* BridgeKitSample Mac */,
-				3CE2192B1A9E5AB4000C509D /* BridgeKitSampleJava */,
+				B45B38731ACDBA3B0096A4E2 /* BridgeKitSampleJava */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		3CE2191E1A9D73A9000C509D /* cocos2dMacFramework.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = cocos2dMacFramework.framework;
-			remoteRef = 3CE2191D1A9D73A9000C509D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		7A9790FE19E62E40001FFC4D /* libcocos2d.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -832,19 +870,12 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3CE2192A1A9E5AB4000C509D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3CE219321A9E5B03000C509D /* ToastBridge.java in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7A4035FB19DDEE84007B6E8F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7A4036E819DE3F33007B6E8F /* MainScene.m in Sources */,
+				B4E0226A1ACDE6F6000CD9D5 /* BridgeKitSampleController.m in Sources */,
 				7A40360419DDEE84007B6E8F /* main.m in Sources */,
 				7A59498E19E3941300F65F90 /* AppDelegate.m in Sources */,
 			);
@@ -854,9 +885,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B45B38711ACDB9D20096A4E2 /* ToastBridge.m in Sources */,
+				B4E022691ACDE6F6000CD9D5 /* BridgeKitSampleController.m in Sources */,
 				927F619E196C771E000F43EF /* MainScene.m in Sources */,
-				3CE2191F1A9D75FB000C509D /* ToastBridge.m in Sources */,
 				5B121030197484FA004C1E1D /* BridgeKitSampleActivity.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B45B38721ACDBA3B0096A4E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45B38781ACDBA520096A4E2 /* ToastBridge.java in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,6 +905,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B73789871807631A0076A88C /* main.m in Sources */,
+				B4E022681ACDE6F6000CD9D5 /* BridgeKitSampleController.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 			);
@@ -873,11 +914,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3CE219341A9E668C000C509D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3CE2192B1A9E5AB4000C509D /* BridgeKitSampleJava */;
-			targetProxy = 3CE219331A9E668C000C509D /* PBXContainerItemProxy */;
-		};
 		7A97911019E6319A001FFC4D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "cocos2d-ios";
@@ -893,55 +929,14 @@
 			name = cocos2dAndroid;
 			targetProxy = 7A97912119E6321C001FFC4D /* PBXContainerItemProxy */;
 		};
+		B45B387A1ACDBA600096A4E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B45B38731ACDBA3B0096A4E2 /* BridgeKitSampleJava */;
+			targetProxy = B45B38791ACDBA600096A4E2 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3CE2192D1A9E5AB4000C509D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				MACOSX_DEPLOYMENT_TARGET = "$(inherited)";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = sbandroid;
-			};
-			name = Debug;
-		};
-		3CE2192E1A9E5AB4000C509D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				MACOSX_DEPLOYMENT_TARGET = "$(inherited)";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = sbandroid;
-			};
-			name = Release;
-		};
 		7A40361919DDEE84007B6E8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1133,6 +1128,52 @@
 			};
 			name = Release;
 		};
+		B45B38761ACDBA3B0096A4E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = "$(inherited)";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = sbandroid;
+			};
+			name = Debug;
+		};
+		B45B38771ACDBA3B0096A4E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = "$(inherited)";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = sbandroid;
+			};
+			name = Release;
+		};
 		B77F1CDC17B978D8009739AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1267,14 +1308,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3CE219311A9E5AB4000C509D /* Build configuration list for PBXNativeTarget "BridgeKitSampleJava" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3CE2192D1A9E5AB4000C509D /* Debug */,
-				3CE2192E1A9E5AB4000C509D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		7A40361E19DDEE84007B6E8F /* Build configuration list for PBXNativeTarget "BridgeKitSample Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1289,6 +1322,15 @@
 			buildConfigurations = (
 				927F61BD196C771E000F43EF /* Debug */,
 				927F61BE196C771E000F43EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B45B38751ACDBA3B0096A4E2 /* Build configuration list for PBXNativeTarget "BridgeKitSampleJava" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B45B38761ACDBA3B0096A4E2 /* Debug */,
+				B45B38771ACDBA3B0096A4E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -24,10 +24,18 @@
 
 
 #import "BridgeKitSampleActivity.h"
+#import "BridgeKitSampleController.h"
 
 #import <AndroidKit/AndroidKeyEvent.h>
 
 @implementation BridgeKitSampleActivity
+
+- (void)run
+{
+    [super run];
+    
+    [BridgeKitSampleController setupApplication];
+}
 
 - (CCScene *)startScene
 {
