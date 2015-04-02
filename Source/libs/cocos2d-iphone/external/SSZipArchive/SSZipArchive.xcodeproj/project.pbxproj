@@ -598,7 +598,6 @@
 				GCC_PREFIX_HEADER = "Example/Other Sources/SSZipArchive-Prefix.pch";
 				INFOPLIST_FILE = "Example/Resources/SSZipArchive-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -612,7 +611,6 @@
 				GCC_PREFIX_HEADER = "Example/Other Sources/SSZipArchive-Prefix.pch";
 				INFOPLIST_FILE = "Example/Resources/SSZipArchive-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

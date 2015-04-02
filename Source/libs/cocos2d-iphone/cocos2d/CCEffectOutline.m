@@ -14,6 +14,9 @@
 #import "CCSprite_Private.h"
 #import "CCTexture.h"
 #import "CCSpriteFrame.h"
+#import "CCColor.h"
+#import "NSValue+CCRenderer.h"
+#import "CCRendererBasicTypes.h"
 
 
 @interface CCEffectOutlineImpl : CCEffectImpl
@@ -184,7 +187,7 @@
     return self;
 }
 
-+(id)effectWithOutlineColor:(CCColor*)outlineColor outlineWidth:(int)outlineWidth
++(instancetype)effectWithOutlineColor:(CCColor*)outlineColor outlineWidth:(int)outlineWidth
 {
     return [[self alloc] initWithOutlineColor:outlineColor outlineWidth:outlineWidth];
 }

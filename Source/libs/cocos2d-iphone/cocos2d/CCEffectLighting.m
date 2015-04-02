@@ -20,6 +20,7 @@
 
 #import "CCEffect_Private.h"
 #import "CCSprite_Private.h"
+#import "CCNode_Private.h"
 
 
 typedef struct _CCLightKey
@@ -239,13 +240,12 @@ static float conditionShininess(float shininess);
         passInputs.shaderUniforms[CCShaderUniformTexCoord1Center] = [NSValue valueWithGLKVector2:passInputs.texCoord1Center];
         passInputs.shaderUniforms[CCShaderUniformTexCoord1Extents] = [NSValue valueWithGLKVector2:passInputs.texCoord1Extents];
 
-        GLKMatrix4 nodeLocalToWorld = CCEffectUtilsMat4FromAffineTransform(passInputs.sprite.nodeToWorldTransform);
+        GLKMatrix4 nodeLocalToWorld = passInputs.sprite.nodeToWorldMatrix;
         GLKMatrix4 ndcToWorld = GLKMatrix4Multiply(nodeLocalToWorld, passInputs.ndcToNodeLocal);
         
-
-        GLKMatrix2 tangentMatrix = CCEffectUtilsMatrix2InvertAndTranspose(GLKMatrix4GetMatrix2(nodeLocalToWorld), nil);
-        GLKVector2 reflectTangent = GLKVector2Normalize(CCEffectUtilsMatrix2MultiplyVector2(tangentMatrix, GLKVector2Make(1.0f, 0.0f)));
-        GLKVector2 reflectBinormal = GLKVector2Make(-reflectTangent.y, reflectTangent.x);
+        // Tangent and binormal vectors are the x/y basis vectors from the nodeLocalToWorldMatrix
+        GLKVector2 reflectTangent = GLKVector2Normalize(GLKVector2Make(nodeLocalToWorld.m[0], nodeLocalToWorld.m[1]));
+        GLKVector2 reflectBinormal = GLKVector2Normalize(GLKVector2Make(nodeLocalToWorld.m[4], nodeLocalToWorld.m[5]));
 
         passInputs.shaderUniforms[pass.uniformTranslationTable[@"u_worldSpaceTangent"]] = [NSValue valueWithGLKVector2:reflectTangent];
         passInputs.shaderUniforms[pass.uniformTranslationTable[@"u_worldSpaceBinormal"]] = [NSValue valueWithGLKVector2:reflectBinormal];
@@ -260,7 +260,7 @@ static float conditionShininess(float shininess);
             CCLightNode *light = weakInterface.closestLights[lightIndex];
             
             // Get the transform from the light's coordinate space to the effect's coordinate space.
-            GLKMatrix4 lightNodeToWorld = CCEffectUtilsMat4FromAffineTransform(light.nodeToWorldTransform);
+            GLKMatrix4 lightNodeToWorld = light.nodeToWorldMatrix;
             
             // Compute the light's position in the effect node's coordinate system.
             GLKVector4 lightVector = GLKVector4Make(0.0f, 0.0f, 0.0f, 0.0f);
@@ -371,7 +371,7 @@ static float conditionShininess(float shininess);
 }
 
 
-+(id)effectWithGroups:(NSArray *)groups specularColor:(CCColor *)specularColor shininess:(float)shininess
++(instancetype)effectWithGroups:(NSArray *)groups specularColor:(CCColor *)specularColor shininess:(float)shininess
 {
     return [[self alloc] initWithGroups:groups specularColor:specularColor shininess:shininess];
 }
@@ -382,8 +382,8 @@ static float conditionShininess(float shininess);
 
     _needsNormalMap = (sprite.normalMapSpriteFrame != nil);
     
-    CGAffineTransform spriteTransform = sprite.nodeToWorldTransform;
-    CGPoint spritePosition = CGPointApplyAffineTransform(sprite.anchorPointInPoints, sprite.nodeToWorldTransform);
+    GLKMatrix4 spriteTransform = sprite.nodeToWorldMatrix;
+    CGPoint spritePosition = CGPointApplyGLKMatrix4(sprite.anchorPointInPoints, sprite.nodeToWorldMatrix);
     
     CCLightCollection *lightCollection = CCEffectUtilsGetNodeScene(sprite).lights;
     if (self.groupMaskDirty)
@@ -413,7 +413,7 @@ static float conditionShininess(float shininess);
 
 - (BOOL)needsSpecular
 {
-    return (!ccc4FEqual(self.specularColor.ccColor4f, ccc4f(0.0f, 0.0f, 0.0f, 0.0f)) && (self.shininess > 0.0f));
+    return (!GLKVector4AllEqualToScalar(self.specularColor.glkVector4, 0.0f) && (self.shininess > 0.0f));
 }
 
 -(void)setGroups:(NSArray *)groups

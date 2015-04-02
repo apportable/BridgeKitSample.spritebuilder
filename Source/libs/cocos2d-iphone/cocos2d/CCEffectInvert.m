@@ -8,6 +8,8 @@
 
 #import "CCEffectInvert.h"
 #import "CCEffect_Private.h"
+#import "CCProtocols.h"
+#import "CCRendererBasicTypes.h"
 
 
 @interface CCEffectInvertImpl : CCEffectImpl
@@ -73,7 +75,7 @@
     return self;
 }
 
-+(id)effect
++(instancetype)effect
 {
     return [[self alloc] init];
 }

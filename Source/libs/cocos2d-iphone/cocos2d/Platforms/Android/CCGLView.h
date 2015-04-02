@@ -10,12 +10,12 @@
 
 #if __CC_PLATFORM_ANDROID
 
-
+#import <CoreGraphics/CGGeometry.h>
 #import <android/native_window.h>
 #import <bridge/runtime.h>
 #import <GLActivityKit/GLView.h>
-
 #import "../../Platforms/CCGL.h"
+#import "CCView.h"
 #import "CCDirectorView.h"
 
 @class AndroidGestureDetector;
@@ -42,8 +42,7 @@ enum CCAndroidScreenMode {
 };
 
 BRIDGE_CLASS("com.apportable.GLView")
-@interface CCGLView : GLView <CCDirectorView>
-
+@interface CCGLView : GLView <CCView>
 
 - (id)initWithContext:(AndroidContext *)context screenMode:(enum CCAndroidScreenMode)screenMode scaleFactor:(float)scaleFactor;
 
@@ -57,6 +56,8 @@ BRIDGE_CLASS("com.apportable.GLView")
 @property (nonatomic, readonly) EGLContext eglContext;
 @property (nonatomic, readonly) EGLConfig eglConfiguration;
 @property (nonatomic, readonly) enum CCAndroidScreenMode screenMode;
+@property(nonatomic, strong, readonly) CCDirector *director;
+
 
 - (void)addGestureDetector:(AndroidGestureDetector *)detector;
 - (void)removeGestureDetector:(AndroidGestureDetector *)detector;
